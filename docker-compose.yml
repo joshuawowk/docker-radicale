@@ -30,9 +30,9 @@ services:
     restart: unless-stopped
     volumes:
       - /docker/radicale/data:/data
-    network:
-      npm_net:
+    networks:
+      - npm_net
 
 networks:
-   npm_net:
-      external: true
+  npm_net:
+    external: true
